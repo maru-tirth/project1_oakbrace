@@ -3,106 +3,44 @@
     <navbar />
     <div>
       <!-- CAROUSEL-START -->
-      <v-carousel height="650px" width="100%">
-        <v-carousel-item
-          v-for="(item, i) in items"
-          :key="i"
-          :src="item.src"
-          reverse-transition="fade-transition"
-          transition="fade-transition"
-        ></v-carousel-item>
+      <v-carousel height="650px" width="100%" hide-delimiters>
+        <router-link :to="item.link">
+          ><v-carousel-item
+            v-for="(item, i) in items"
+            :key="i"
+            :src="item.src"
+            reverse-transition="fade-transition"
+            transition="fade-transition"
+          >
+            <v-container
+              fill-height
+              fluid
+              pa-0
+              ma-0
+              pb-0
+              style="text-align: center"
+            >
+              <v-layout fill-height align-end pb-4 mb-4>
+                <v-flex xs12>
+                  <v-card color="#000000ba" class="pa-2">
+                    <span
+                      class="headline white--text"
+                      style="text-decoration: none"
+                      v-text="item.text"
+                    >
+                    </span>
+                  </v-card>
+                </v-flex>
+              </v-layout>
+            </v-container>
+          </v-carousel-item>
+        </router-link>
       </v-carousel>
       <!-- CAROUSEL-END -->
 
       <!-- CARD-START -->
       <br />
-      <v-row>
-        <v-col cols="12" md="4">
-          <v-card class="mx-auto" max-width="400">
-            <v-img
-              class="white--text align-end cardimage"
-              height="400px"
-              src="https://oakbrace.co.uk/img/home1_desktop.533bf097.jpg"
-              gradient="to bottom, rgba(10,15,21,.33), rgba(20,30,62,.7)"
-            >
-              <v-card-title>Loft Conversions</v-card-title>
-
-              <v-card-text class="text--white">
-                <div>
-                  Add space with a beautiful master bedroom, new spacious home
-                  office or a special dream retreat.
-                </div>
-              </v-card-text>
-
-              <v-card-actions>
-                <router-link
-                  to="/loft-conversions"
-                  style="text-decoration: none"
-                  ><v-btn color="white" outlined class="explore">
-                    Explore
-                  </v-btn></router-link
-                >
-              </v-card-actions>
-            </v-img>
-          </v-card>
-        </v-col>
-
-        <v-col cols="12" md="4">
-          <v-card class="mx-auto" max-width="400">
-            <v-img
-              class="white--text align-end cardimage"
-              height="400px"
-              src="	https://oakbrace.co.uk/img/home2_desktop.7855d3d4.jpg"
-              gradient="to bottom, rgba(10,15,21,.33), rgba(20,30,62,.7)"
-            >
-              <v-card-title>Extensions</v-card-title>
-
-              <v-card-text class="text--white">
-                <div>
-                  Why move house when you can add rooms and space, improving
-                  your properties value and potential.
-                </div>
-              </v-card-text>
-
-              <v-card-actions>
-                <router-link to="/extensions" style="text-decoration: none"
-                  ><v-btn color="white" outlined class="explore">
-                    Explore
-                  </v-btn></router-link
-                >
-              </v-card-actions>
-            </v-img>
-          </v-card>
-        </v-col>
-
-        <v-col cols="12" md="4">
-          <v-card class="mx-auto" max-width="400">
-            <v-img
-              class="white--text align-end cardimage"
-              height="400px"
-              src="		https://oakbrace.co.uk/img/home3_desktop.2f7c3a77.jpg"
-              gradient="to bottom, rgba(10,15,21,.33), rgba(20,30,62,.7)"
-            >
-              <v-card-title>Refurbishments</v-card-title>
-
-              <v-card-text class="text--white">
-                <div>
-                  Improving your property can be overwhelming, but we can help
-                  you design and deliver your dreams
-                </div>
-              </v-card-text>
-
-              <v-card-actions>
-                <router-link to="/refurbishments" style="text-decoration: none"
-                  ><v-btn color="white" outlined class="explore">
-                    Explore
-                  </v-btn></router-link
-                >
-              </v-card-actions>
-            </v-img>
-          </v-card>
-        </v-col>
-      </v-row>
+      <cards />
       <!-- CARD END -->
       <br />
       <br />
@@ -112,8 +50,8 @@
           <v-col cols="6">
             <div class="text1">Why choose us?</div>
             <div class="text2">
-              Our design & build team are highly qualified with a proven track
-              record
+              Our design & build team are highly qualified with a proven track e
+              on desktorecord
             </div>
           </v-col>
           <v-col cols="6"></v-col>
@@ -218,21 +156,29 @@
 
 <script>
 import navbar from "../components/navbar.vue";
+import cards from "../components/home-card.vue";
 export default {
   components: {
     navbar,
+    cards,
   },
   data() {
     return {
       items: [
         {
           src: "https://images4.alphacoders.com/114/1141675.jpg",
+          text: "hi 1",
+          link: "https://oakbrace.co.uk",
         },
         {
           src: "https://images2.alphacoders.com/995/995155.png",
+          text: "hi 2",
+          link: "",
         },
         {
           src: "https://cdn.homedit.com/wp-content/uploads/2020/01/River-House-Indonesia-by-Alexis-Dornier.jpg",
+          text: "hi 3",
+          link: "",
         },
       ],
     };

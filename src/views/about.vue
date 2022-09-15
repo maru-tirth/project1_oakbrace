@@ -2,20 +2,9 @@
   <div>
     <navbar />
     <div>
-      <v-parallax
-        class="img"
-        dark
-        src="https://oakbrace.co.uk/img/banner_about_desktop.feaef9a7.jpg"
-        gradient="to bottom,rgba(235,235,235,0)9%,rgba(255,250,250,1)93%)"
-      >
-        <v-row align="center" justify="center">
-          <v-col class="text-center" cols="12">
-            <v-title class="text-h4 font-weight-bold mb-4 text"
-              >ABOUT US</v-title
-            >
-          </v-col>
-        </v-row>
-      </v-parallax>
+      <div class="hero">
+        <h4 class="text0">ABOUT</h4>
+      </div>
     </div>
     <v-container>
       <v-row>
@@ -130,28 +119,12 @@
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2473.5627724754904!2d-0.6244450843359499!3d51.686145779664876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48765d8169d545cd%3A0x97bd32e094e38661!2sCopperkins%20Ln%2C%20Amersham%2C%20UK!5e0!3m2!1sen!2sin!4v1634887328158!5m2!1sen!2sin"
               allowfullscreen="allowfullscreen"
               loading="lazy"
-              @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 62.5%;
-    font-family: 'Roboto', sans-serif;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}class="size"
-              style="border: 0px"
-            ></iframe>
+            >
+              * { margin: 0; padding: 0; box-sizing: border-box; } html {
+              font-size: 62.5%; font-family: 'Roboto', sans-serif; } li {
+              list-style: none; } a { text-decoration: none; }class="size"
+              style="border: 0px" ></iframe
+            >
           </div>
         </div>
       </div>
@@ -170,8 +143,33 @@ export default {
 };
 </script>
 <style scoped>
-.text {
-  color: black;
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::before {
+  content: "";
+  background-image: url("https://oakbrace.co.uk/img/banner_contact_desktop.325b93c3.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+}
+
+.text0 {
+  position: relative;
+  color: #000;
+  font-size: 3rem;
+  line-height: 0.9;
+  text-align: center;
   font-family: "Kanit", sans-serif;
 }
 .text1 {
@@ -190,9 +188,6 @@ export default {
   line-height: 25px;
   font-size: 18px;
   font-family: "Kanit", sans-serif;
-}
-.img {
-  opacity: 70%;
 }
 .text4 {
   color: grey;

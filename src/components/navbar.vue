@@ -91,23 +91,23 @@ li {
 }
 .dropdown {
   background-color: #add8e6;
-  padding: 1em 0;
-  position: absolute; /*WITH RESPECT TO PARENT*/
+  padding: 0;
+  position: absolute;
   display: none;
-  border-radius: 8px;
   top: 35px;
-  width: 200px;
+  width: 250px;
 }
 .dropdown li + li {
   margin-top: 10px;
 }
 .dropdown li {
   padding: 0.5em 1em;
-  width: 200px;
+  width: 240px;
   text-align: center;
 }
 .dropdown li:hover {
   background-color: #51b4b6;
+  border-radius: 0;
 }
 .services:hover .dropdown {
   display: block;
@@ -115,6 +115,7 @@ li {
 input[type="checkbox"] {
   display: none;
 }
+
 /*HAMBURGER MENU*/
 .hamburger {
   display: none;
