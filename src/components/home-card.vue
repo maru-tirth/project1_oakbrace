@@ -8,12 +8,13 @@
           src="https://oakbrace.co.uk/img/home1_desktop.533bf097.jpg"
           gradient="to bottom, rgba(10,15,21,.33), rgba(20,30,62,.7)"
         >
-          <v-card-title>Loft Conversions</v-card-title>
+          <v-card-title v-for="title1 in cards">{{
+            title1.title1
+          }}</v-card-title>
 
           <v-card-text class="text--white">
-            <div>
-              Add space with a beautiful master bedroom, new spacious home
-              office or a special dream retreat.
+            <div v-for="details1 in cards">
+              {{ details1.details1 }}
             </div>
           </v-card-text>
 
@@ -36,12 +37,13 @@
           src="	https://oakbrace.co.uk/img/home2_desktop.7855d3d4.jpg"
           gradient="to bottom, rgba(10,15,21,.33), rgba(20,30,62,.7)"
         >
-          <v-card-title>Extensions</v-card-title>
+          <v-card-title v-for="title2 in cards">{{
+            title2.title2
+          }}</v-card-title>
 
           <v-card-text class="text--white">
-            <div>
-              Why move house when you can add rooms and space, improving your
-              properties value and potential.
+            <div v-for="details2 in cards">
+              {{ details2.details2 }}
             </div>
           </v-card-text>
 
@@ -64,12 +66,13 @@
           src="		https://oakbrace.co.uk/img/home3_desktop.2f7c3a77.jpg"
           gradient="to bottom, rgba(10,15,21,.33), rgba(20,30,62,.7)"
         >
-          <v-card-title>Refurbishments</v-card-title>
+          <v-card-title v-for="title3 in cards">{{
+            title3.title3
+          }}</v-card-title>
 
           <v-card-text class="text--white">
-            <div>
-              Improving your property can be overwhelming, but we can help you
-              design and deliver your dreams
+            <div v-for="details3 in cards">
+              {{ details3.details3 }}
             </div>
           </v-card-text>
 
@@ -85,3 +88,22 @@
     </v-col>
   </v-row>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      cards: [],
+    };
+  },
+
+  created() {
+    fetch("http://localhost:3000/cards")
+      .then((res) => res.json())
+      .then((data) => {
+        this.cards = data;
+        console.log(this.cards);
+      })
+      .catch((err) => console.log(err));
+  },
+};
+</script>

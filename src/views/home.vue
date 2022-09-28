@@ -4,7 +4,7 @@
     <div>
       <!-- CAROUSEL-START -->
       <v-carousel height="650px" width="100%" hide-delimiters>
-        <router-link :to="item.link">
+        <router-link :to="items[0].link">
           ><v-carousel-item
             v-for="(item, i) in items"
             :key="i"
@@ -37,7 +37,10 @@
         </router-link>
       </v-carousel>
       <!-- CAROUSEL-END -->
-
+      <br />
+      <br />
+      <br />
+      <swiper />
       <!-- CARD-START -->
       <br />
       <cards />

@@ -2,11 +2,12 @@
   <nav class="navbar">
     <!-- LOGO -->
     <div class="logo">
-      <img
-        height="60px"
-        width="100%"
-        src="https://oakbrace.co.uk/img/Oaksbrace.ee14c22e.svg"
-      />
+      <router-link to="/"
+        ><img
+          height="60px"
+          width="100%"
+          src="https://oakbrace.co.uk/img/Oaksbrace.ee14c22e.svg"
+      /></router-link>
     </div>
     <!-- NAVIGATION MENU -->
     <ul class="nav-links">

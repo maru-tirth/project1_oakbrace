@@ -9,11 +9,12 @@
             height="200px"
           ></v-img>
 
-          <v-card-title> LOFT CONVERSIONS </v-card-title>
+          <v-card-title v-for="title1 in cards">
+            {{ title1.title1 }}
+          </v-card-title>
 
-          <v-card-subtitle>
-            Ad space with a beautiful master bedroom,newspacious home office or
-            a special dream retreat
+          <v-card-subtitle v-for="details1 in cards">
+            {{ details1.details1 }}
           </v-card-subtitle>
 
           <v-card-actions>
@@ -33,11 +34,12 @@
             height="200px"
           ></v-img>
 
-          <v-card-title> EXTENSIVE BUILDS </v-card-title>
+          <v-card-title v-for="title2 in cards">
+            {{ title2.title2 }}
+          </v-card-title>
 
-          <v-card-subtitle>
-            Why move house when you can add rooms and space,improving your
-            properties valuse and potential.
+          <v-card-subtitle v-for="details2 in cards">
+            {{ details2.details2 }}
           </v-card-subtitle>
 
           <v-card-actions>
@@ -57,12 +59,13 @@
             height="200px"
           ></v-img>
 
-          <v-card-title> REFURBISHMENTS </v-card-title>
+          <v-card-title v-for="title3 in cards">
+            {{ title3.title3 }}
+          </v-card-title>
 
-          <v-card-subtitle>
-            Improving yourproperty can be overwhelming,but we can help you and
-            desing and deliver your dream.</v-card-subtitle
-          >
+          <v-card-subtitle v-for="details3 in cards">
+            {{ details3.details3 }}
+          </v-card-subtitle>
 
           <v-card-actions>
             <router-link to="/refurbishments" style="text-decoration: none"
@@ -82,11 +85,12 @@
             height="200px"
           ></v-img>
 
-          <v-card-title> BESPOKE FINISHES </v-card-title>
+          <v-card-title v-for="title4 in cards">
+            {{ title4.title4 }}
+          </v-card-title>
 
-          <v-card-subtitle>
-            Feature walls, flooring, hand made kitchens,sheliving systems,
-            lighting & smart solutions
+          <v-card-subtitle v-for="details4 in cards">
+            {{ details4.details4 }}
           </v-card-subtitle>
 
           <v-card-actions>
@@ -106,11 +110,12 @@
             height="200px"
           ></v-img>
 
-          <v-card-title>KITCHENS FIT-OUTS</v-card-title>
+          <v-card-title v-for="title5 in cards">
+            {{ title5.title5 }}</v-card-title
+          >
 
-          <v-card-subtitle>
-            We are renowned for our beautifully designed and installed
-            contemporary and traditional kitchen
+          <v-card-subtitle v-for="details5 in cards">
+            {{ details5.details5 }}
           </v-card-subtitle>
 
           <v-card-actions>
@@ -130,11 +135,12 @@
             height="200px"
           ></v-img>
 
-          <v-card-title> CARPENTARY </v-card-title>
+          <v-card-title v-for="title6 in cards">
+            {{ title6.title6 }}</v-card-title
+          >
 
-          <v-card-subtitle>
-            Highly skilled craftsmen with a passio for timber,joinery and the
-            art or carpentry
+          <v-card-subtitle v-for="details6 in cards">
+            {{ details6.details6 }}
           </v-card-subtitle>
 
           <v-card-actions>
@@ -149,3 +155,22 @@
     </v-row>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      cards: [],
+    };
+  },
+
+  created() {
+    fetch("http://localhost:3000/cards")
+      .then((res) => res.json())
+      .then((data) => {
+        this.cards = data;
+        console.log(this.cards);
+      })
+      .catch((err) => console.log(err));
+  },
+};
+</script>
