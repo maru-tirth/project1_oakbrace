@@ -123,6 +123,7 @@ input[type="checkbox"] {
   font-size: 24px;
   user-select: none;
 }
+
 /* APPLYING MEDIA QUERIES */
 @media (max-width: 768px) {
   .menu {
