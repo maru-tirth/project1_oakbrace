@@ -3,44 +3,100 @@
     <navbar />
     <div>
       <!-- CAROUSEL-START -->
-      <v-carousel height="650px" width="100%" hide-delimiters>
-        <router-link :to="items[0].link">
-          ><v-carousel-item
-            v-for="(item, i) in items"
-            :key="i"
-            :src="item.src"
-            reverse-transition="fade-transition"
-            transition="fade-transition"
-          >
-            <v-container
-              fill-height
-              fluid
-              pa-0
-              ma-0
-              pb-0
-              style="text-align: center"
-            >
-              <v-layout fill-height align-end pb-4 mb-4>
-                <v-flex xs12>
-                  <v-card color="#000000ba" class="pa-2">
-                    <span
-                      class="headline white--text"
-                      style="text-decoration: none"
-                      v-text="item.text"
-                    >
-                    </span>
-                  </v-card>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-carousel-item>
-        </router-link>
-      </v-carousel>
+
       <!-- CAROUSEL-END -->
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="false"
+        autoplay
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner" style="height: 100%">
+          <div class="carousel-item active">
+            <a href="https://oakbrace.co.uk"
+              ><img
+                src="https://images4.alphacoders.com/114/1141675.jpg"
+                class="d-block w-100"
+                alt="oakbrace"
+            /></a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>
+                Some representative placeholder content for the first slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://images2.alphacoders.com/995/995155.png"
+              class="d-block w-100"
+              alt="oakbrace"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>
+                Some representative placeholder content for the second slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://cdn.homedit.com/wp-content/uploads/2020/01/River-House-Indonesia-by-Alexis-Dornier.jpg"
+              class="d-block w-100"
+              style="height: 600px"
+              alt="oakbrace"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>
+                Some representative placeholder content for the third slide.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button> -->
+      </div>
       <br />
-      <br />
-      <br />
-      <swiper />
+
       <!-- CARD-START -->
       <br />
       <cards />
@@ -160,31 +216,15 @@
 <script>
 import navbar from "../components/navbar.vue";
 import cards from "../components/home-card.vue";
+
 export default {
   components: {
     navbar,
     cards,
   },
+
   data() {
-    return {
-      items: [
-        {
-          src: "https://images4.alphacoders.com/114/1141675.jpg",
-          text: "hi 1",
-          link: "https://oakbrace.co.uk",
-        },
-        {
-          src: "https://images2.alphacoders.com/995/995155.png",
-          text: "hi 2",
-          link: "",
-        },
-        {
-          src: "https://cdn.homedit.com/wp-content/uploads/2020/01/River-House-Indonesia-by-Alexis-Dornier.jpg",
-          text: "hi 3",
-          link: "",
-        },
-      ],
-    };
+    return {};
   },
 };
 </script>
@@ -288,6 +328,9 @@ h4 {
 }
 a {
   text-align: center;
+}
+.carousel-caption {
+  color: black;
 }
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:,wght@1,500&display=swap");

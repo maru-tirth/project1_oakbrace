@@ -1,40 +1,64 @@
 {
   "cards": [
     {
-      "title1": "LOFT CONVERSIONS",
-      "details1": "Add space with a beautiful master bedroom, new spacious home office or a special dream retreat.",
-      "btnText1": "Explore",
-      "id": 1
-    },
-    {
-      "title2": "EXTENSIVE BUILDS",
-      "details2": "Why move house when you can add rooms and space, improving your properties value and potential.",
-      "btnText2": "Explore",
-      "id": 2
-    },
-    {
-      "title3": "REFURBISHMENTS",
-      "details3": "Improving your property can be overwhelming, but we can help you design and deliver your dreams.",
-      "btnText3": "Explore",
-      "id": 3
-    },
-    {
-      "title4": "BESPOKE FINISHES",
-      "details4": "Feature walls, flooring, hand made kitchens,sheliving systems, lighting & smart solutions.",
-      "btnText4": "Explore",
-      "id": 4
-    },
-    {
-      "title5": "KITCHENS FIT-OUTS",
-      "details5": "We are renowned for our beautifully designed and installed contemporary and traditional kitchen.",
-      "btnText5": "Explore",
-      "id": 5
-    },
-    {
-      "title6": "CARPENTARY",
-      "details6": "Highly skilled craftsmen with a passio for timber,joinery and the art or carpentry.",
-      "btnText6": "Explore",
-      "id": 6
+      "title": [
+        {
+          "id": 1,
+          "label": "LOFT CONVERSIONS"
+        },
+        {
+          "id": 2,
+          "label": "EXTENSIVE BUILDS"
+        },
+        {
+          "id": 3,
+          "label": "REFURBISHMENTS"
+        },
+        {
+          "id": 4,
+          "label": "BESPOKE FINISHES"
+        },
+        {
+          "id": 5,
+          "label": "KITCHENS FIT-OUTS"
+        },
+        {
+          "id": 6,
+          "label": "CARPENTARY"
+        }
+      ],
+      "details": [
+        {
+          "id": 1,
+          "lable": "Add space with a beautiful master bedroom, new spacious home office or a special dream retreat."
+        },
+        {
+          "id": 2,
+          "lable": "Why move house when you can add rooms and space, improving your properties value and potential."
+        },
+        {
+          "id": 3,
+          "lable": "Improving your property can be overwhelming, but we can help you design and deliver your dreams."
+        },
+        {
+          "id": 4,
+          "lable": "Feature walls, flooring, hand made kitchens,sheliving systems, lighting & smart solutions."
+        },
+        {
+          "id": 5,
+          "lable": "We are renowned for our beautifully designed and installed contemporary and traditional kitchen."
+        },
+        {
+          "id": 6,
+          "lable": "Highly skilled craftsmen with a passio for timber,joinery and the art or carpentry."
+        }
+      ],
+      "buttonText": [
+        {
+          "id": 1,
+          "lable": "Explore"
+        }
+      ]
     }
   ]
 }
