@@ -9,18 +9,26 @@
             height="200px"
           ></v-img>
 
-          <v-card-title v-for="title1 in cards">
-            {{ title1.title1 }}
+          <v-card-title v-for="text in title" :key="text.id">
+            {{ text.lable }}
           </v-card-title>
 
-          <v-card-subtitle v-for="details1 in cards">
-            {{ details1.details1 }}
+          <v-card-subtitle>
+            <div v-for="data in details" :key="data.id">
+              {{ data.lable }}
+            </div>
           </v-card-subtitle>
 
           <v-card-actions>
             <router-link to="/loft-conversions" style="text-decoration: none"
-              ><v-btn color="orange lighten-2" outlined class="explore">
-                Explore
+              ><v-btn
+                color="orange lighten-2"
+                outlined
+                class="explore"
+                v-for="text in buttonText"
+                :key="text.id"
+              >
+                {{ text.lable }}
               </v-btn></router-link
             >
           </v-card-actions>
@@ -34,18 +42,26 @@
             height="200px"
           ></v-img>
 
-          <v-card-title v-for="title2 in cards">
-            {{ title2.title2 }}
+          <v-card-title v-for="text in title" :key="text.id">
+            {{ text.lable }}
           </v-card-title>
 
-          <v-card-subtitle v-for="details2 in cards">
-            {{ details2.details2 }}
+          <v-card-subtitle>
+            <div v-for="data in details" :key="data.id">
+              {{ data.lable }}
+            </div>
           </v-card-subtitle>
 
           <v-card-actions>
             <router-link to="/extensions" style="text-decoration: none"
-              ><v-btn color="orange lighten-2" outlined class="explore">
-                Explore
+              ><v-btn
+                color="orange lighten-2"
+                outlined
+                class="explore"
+                v-for="text in buttonText"
+                :key="text.id"
+              >
+                {{ text.lable }}
               </v-btn></router-link
             >
           </v-card-actions>
@@ -59,18 +75,26 @@
             height="200px"
           ></v-img>
 
-          <v-card-title v-for="title3 in cards">
-            {{ title3.title3 }}
+          <v-card-title v-for="text in title" :key="text.id">
+            {{ text.lable }}
           </v-card-title>
 
-          <v-card-subtitle v-for="details3 in cards">
-            {{ details3.details3 }}
+          <v-card-subtitle>
+            <div v-for="data in details" :key="data.id">
+              {{ data.lable }}
+            </div>
           </v-card-subtitle>
 
           <v-card-actions>
             <router-link to="/refurbishments" style="text-decoration: none"
-              ><v-btn color="orange lighten-2" outlined class="explore">
-                Explore
+              ><v-btn
+                color="orange lighten-2"
+                outlined
+                class="explore"
+                v-for="text in buttonText"
+                :key="text.id"
+              >
+                {{ text.lable }}
               </v-btn></router-link
             >
           </v-card-actions>
@@ -85,18 +109,26 @@
             height="200px"
           ></v-img>
 
-          <v-card-title v-for="title4 in cards">
-            {{ title4.title4 }}
+          <v-card-title v-for="text in title" :key="text.id">
+            {{ text.lable }}
           </v-card-title>
 
-          <v-card-subtitle v-for="details4 in cards">
-            {{ details4.details4 }}
+          <v-card-subtitle>
+            <div v-for="data in details" :key="data.id">
+              {{ data.lable }}
+            </div>
           </v-card-subtitle>
 
           <v-card-actions>
             <router-link to="/bespoke" style="text-decoration: none"
-              ><v-btn color="orange lighten-2" outlined class="explore">
-                Explore
+              ><v-btn
+                color="orange lighten-2"
+                outlined
+                class="explore"
+                v-for="text in buttonText"
+                :key="text.id"
+              >
+                {{ text.lable }}
               </v-btn></router-link
             >
           </v-card-actions>
@@ -110,18 +142,26 @@
             height="200px"
           ></v-img>
 
-          <v-card-title v-for="title5 in cards">
-            {{ title5.title5 }}</v-card-title
-          >
+          <v-card-title v-for="text in title" :key="text.id">
+            {{ text.lable }}
+          </v-card-title>
 
-          <v-card-subtitle v-for="details5 in cards">
-            {{ details5.details5 }}
+          <v-card-subtitle>
+            <div v-for="data in details" :key="data.id">
+              {{ data.lable }}
+            </div>
           </v-card-subtitle>
 
           <v-card-actions>
             <router-link to="/kitchen" style="text-decoration: none"
-              ><v-btn color="orange lighten-2" outlined class="explore">
-                Explore
+              ><v-btn
+                color="orange lighten-2"
+                outlined
+                class="explore"
+                v-for="text in buttonText"
+                :key="text.id"
+              >
+                {{ text.lable }}
               </v-btn></router-link
             >
           </v-card-actions>
@@ -135,18 +175,26 @@
             height="200px"
           ></v-img>
 
-          <v-card-title v-for="title6 in cards">
-            {{ title6.title6 }}</v-card-title
-          >
+          <v-card-title v-for="text in title" :key="text.id">
+            {{ text.lable }}
+          </v-card-title>
 
-          <v-card-subtitle v-for="details6 in cards">
-            {{ details6.details6 }}
+          <v-card-subtitle>
+            <div v-for="data in details" :key="data.id">
+              {{ data.lable }}
+            </div>
           </v-card-subtitle>
 
           <v-card-actions>
             <router-link to="/carpentary" style="text-decoration: none"
-              ><v-btn color="orange lighten-2" outlined class="explore">
-                Explore
+              ><v-btn
+                color="orange lighten-2"
+                outlined
+                class="explore"
+                v-for="text in buttonText"
+                :key="text.id"
+              >
+                {{ text.lable }}
               </v-btn></router-link
             >
           </v-card-actions>
@@ -160,6 +208,70 @@ export default {
   data() {
     return {
       cards: [],
+      title: [
+        {
+          id: 1,
+          label: "LOFT CONVERSIONS",
+        },
+        {
+          id: 2,
+          label: "EXTENSIVE BUILDS",
+        },
+        {
+          id: 3,
+          label: "REFURBISHMENTS",
+        },
+        {
+          id: 4,
+          label: "BESPOKE FINISHES",
+        },
+        {
+          id: 5,
+          label: "KITCHENS FIT-OUTS",
+        },
+        {
+          id: 6,
+          label: "CARPENTARY",
+        },
+      ],
+      details: [
+        {
+          id: 1,
+          lable:
+            "Add space with a beautiful master bedroom, new spacious home office or a special dream retreat.",
+        },
+        {
+          id: 2,
+          lable:
+            "Why move house when you can add rooms and space, improving your properties value and potential.",
+        },
+        {
+          id: 3,
+          lable:
+            "Improving your property can be overwhelming, but we can help you design and deliver your dreams.",
+        },
+        {
+          id: 4,
+          lable:
+            "Feature walls, flooring, hand made kitchens,sheliving systems, lighting & smart solutions.",
+        },
+        {
+          id: 5,
+          lable:
+            "We are renowned for our beautifully designed and installed contemporary and traditional kitchen.",
+        },
+        {
+          id: 6,
+          lable:
+            "Highly skilled craftsmen with a passio for timber,joinery and the art or carpentry.",
+        },
+      ],
+      buttonText: [
+        {
+          id: 1,
+          lable: "Explore",
+        },
+      ],
     };
   },
 
@@ -168,9 +280,9 @@ export default {
       .then((res) => res.json())
       .then((data) => {
         this.cards = data;
-        console.log(this.cards);
       })
       .catch((err) => console.log(err));
+    console.log(this.cards);
   },
 };
 </script>

@@ -63,82 +63,18 @@
       </v-row>
     </v-container>
     <br />
-    <footer>
-      <div class="row justify-content-evenly align-items-center main">
-        <div class="stat col-sm-12 col-md-3">
-          <div class="allignnn">
-            <a
-              href="/"
-              aria-current="page"
-              class="nav-link color router-link-exact-active active"
-              ><img
-                height="60px"
-                width="100%"
-                src="https://oakbrace.co.uk/img/Oaksbrace.ee14c22e.svg" /></a
-            ><a href="/" class="nav-link"> Home</a>
-            <a href="/services" class="nav-link"> Services</a
-            ><a href="/contact" class="nav-link"> Contact</a>
-          </div>
-        </div>
-        <div class="col-sm-4 col-md-4">
-          <div class="paddd">
-            <h4 class="titlefoot">Get in touch</h4>
-            <v-divider
-              style="background-color: white; width: 400px"
-            ></v-divider>
-            <br />
-            <div class="txttt">
-              Please feel free to get in touch with us regarding any of our
-              services using the following details
-            </div>
-            <ul>
-              <div class="colorrr">
-                <li>
-                  8H Green Park Copperkins Lane, <br />
-                  Amersham HP6 5SS.
-                </li>
-                <li>Phone: 01296 593 879</li>
-                <li>
-                  Email:
-                  <a style="color: rgb(0, 51, 102) !important">
-                    info@oakbrace.co.uk</a
-                  >
-                </li>
-              </div>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-5 col-md-5">
-          <div class="paddd">
-            <h4 class="titlefoot">Where we are</h4>
-            <v-divider
-              style="background-color: white; width: 300px"
-            ></v-divider>
-            <br />
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2473.5627724754904!2d-0.6244450843359499!3d51.686145779664876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48765d8169d545cd%3A0x97bd32e094e38661!2sCopperkins%20Ln%2C%20Amersham%2C%20UK!5e0!3m2!1sen!2sin!4v1634887328158!5m2!1sen!2sin"
-              allowfullscreen="allowfullscreen"
-              loading="lazy"
-            >
-              * { margin: 0; padding: 0; box-sizing: border-box; } html {
-              font-size: 62.5%; font-family: 'Roboto', sans-serif; } li {
-              list-style: none; } a { text-decoration: none; }class="size"
-              style="border: 0px" ></iframe
-            >
-          </div>
-        </div>
-      </div>
-    </footer>
+    <foot />
   </div>
 </template>
 
 <script>
 import navbar from "../components/navbar.vue";
-// import foot from "../components/foot.vue";
+import foot from "../components/foot.vue";
+
 export default {
   components: {
     navbar,
-    // foot,
+    foot,
   },
 };
 </script>

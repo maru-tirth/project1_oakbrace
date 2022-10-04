@@ -81,7 +81,10 @@
                 <li>Phone: 01296 593 879</li>
                 <li>
                   Email:
-                  <a style="color: rgb(0, 51, 102) !important">
+                  <a
+                    href="mailto:info@oakbrace.co.uk"
+                    style="color: rgb(0, 51, 102) !important"
+                  >
                     info@oakbrace.co.uk</a
                   >
                 </li>

@@ -10,8 +10,10 @@
             ><img
               height="60px"
               width="100%"
-              src="https://oakbrace.co.uk/img/Oaksbrace.ee14c22e.svg" /></a
-          ><a href="/about" class="nav-link">About</a>
+              src="https://oakbrace.co.uk/img/Oaksbrace.ee14c22e.svg"
+          /></a>
+          <a href="/" class="nav-link">Home</a>
+          <a href="/about" class="nav-link">About</a>
           <a href="/services" class="nav-link"> Services</a
           ><a href="/contact" class="nav-link"> Contact</a>
         </div>
@@ -33,7 +35,10 @@
               <li>Phone: 01296 593 879</li>
               <li>
                 Email:
-                <a style="color: rgb(0, 51, 102) !important">
+                <a
+                  href="mailto:info@oakbrace.co.uk"
+                  style="color: rgb(0, 51, 102) !important"
+                >
                   info@oakbrace.co.uk</a
                 >
               </li>

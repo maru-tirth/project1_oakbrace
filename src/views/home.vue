@@ -2,9 +2,10 @@
   <div>
     <navbar />
     <div>
+      <br />
+      <br />
+      <br />
       <!-- CAROUSEL-START -->
-
-      <!-- CAROUSEL-END -->
       <div
         id="carouselExampleCaptions"
         class="carousel slide"
@@ -65,7 +66,7 @@
             <img
               src="https://cdn.homedit.com/wp-content/uploads/2020/01/River-House-Indonesia-by-Alexis-Dornier.jpg"
               class="d-block w-100"
-              style="height: 600px"
+              style="height: 100%"
               alt="oakbrace"
             />
             <div class="carousel-caption d-none d-md-block">
@@ -95,6 +96,8 @@
           <span class="visually-hidden">Next</span>
         </button> -->
       </div>
+      <!-- CAROUSEL-END -->
+
       <br />
 
       <!-- CARD-START -->
@@ -140,87 +143,26 @@
       <!-- TEXT-END -->
       <br />
       <div>
-        <footer>
-          <div class="row justify-content-evenly align-items-center main">
-            <div class="stat col-sm-12 col-md-3">
-              <div class="allignnn">
-                <a
-                  href="/"
-                  aria-current="page"
-                  class="nav-link color router-link-exact-active active"
-                  ><img
-                    height="60px"
-                    width="100%"
-                    src="https://oakbrace.co.uk/img/Oaksbrace.ee14c22e.svg" /></a
-                ><router-link to="/about" class="nav-link">About</router-link>
-                <router-link to="/services" class="nav-link">
-                  Services</router-link
-                ><router-link to="/contact" class="nav-link">
-                  Contact</router-link
-                >
-              </div>
-            </div>
-            <div class="col-sm-4 col-md-4">
-              <div class="paddd">
-                <h4 class="titlefoot">Get in touch</h4>
-                <v-divider
-                  style="background-color: white; width: 400px"
-                ></v-divider>
-
-                <br />
-                <div class="txttt">
-                  Please feel freeto get in touch with us regarding any of our
-                  services using the following details
-                </div>
-                <ul>
-                  <div class="colorrr">
-                    <li>
-                      8H Green Park Copperkins Lane, <br />
-                      Amersham HP6 5SS.
-                    </li>
-                    <li>Phone: 01296 593 879</li>
-                    <li>
-                      Email:
-                      <a style="color: rgb(0, 51, 102) !important">
-                        info@oakbrace.co.uk</a
-                      >
-                    </li>
-                  </div>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-5 col-md-5">
-              <div class="paddd">
-                <h4 class="titlefoot">Where we are</h4>
-
-                <v-divider
-                  style="background-color: white; width: 300px"
-                ></v-divider>
-                <br />
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2473.5627724754904!2d-0.6244450843359499!3d51.686145779664876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48765d8169d545cd%3A0x97bd32e094e38661!2sCopperkins%20Ln%2C%20Amersham%2C%20UK!5e0!3m2!1sen!2sin!4v1634887328158!5m2!1sen!2sin"
-                  allowfullscreen="allowfullscreen"
-                  loading="lazy"
-                  class="size"
-                  style="border: 0px"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <foot />
       </div>
     </div>
+    <!-- loader part  -->
+    <!-- <div class="loader-container">
+      <img src="./load.gif" alt="" />
+    </div> -->
   </div>
 </template>
 
 <script>
 import navbar from "../components/navbar.vue";
 import cards from "../components/home-card.vue";
+import foot from "../components/foot.vue";
 
 export default {
   components: {
     navbar,
     cards,
+    foot,
   },
 
   data() {
@@ -330,8 +272,16 @@ a {
   text-align: center;
 }
 .carousel-caption {
-  color: black;
+  color: #fff;
+  background-color: #000000a1;
+  width: 100%;
+  left: 0%;
+  bottom: 0%;
 }
+.carousel-indicators .active {
+  background-color: #fff;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:,wght@1,500&display=swap");
 </style>

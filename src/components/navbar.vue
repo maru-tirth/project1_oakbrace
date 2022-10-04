@@ -61,7 +61,7 @@ li {
   top: 0;
   width: 100%;
   z-index: 10;
-  height: 70px;
+  height: 86px;
 }
 .nav-links a {
   color: #000;
