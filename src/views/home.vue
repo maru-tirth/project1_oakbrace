@@ -6,16 +6,11 @@
       <br />
       <br />
       <!-- CAROUSEL-START -->
-      <div
-        id="carouselExampleCaptions"
-        class="carousel slide"
-        data-bs-ride="false"
-        autoplay
-      >
+      <div id="carouselExampleDark" class="carousel" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button
             type="button"
-            data-bs-target="#carouselExampleCaptions"
+            data-bs-target="#carouselExampleDark"
             data-bs-slide-to="0"
             class="active"
             aria-current="true"
@@ -23,37 +18,39 @@
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleCaptions"
+            data-bs-target="#carouselExampleDark"
             data-bs-slide-to="1"
             aria-label="Slide 2"
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleCaptions"
+            data-bs-target="#carouselExampleDark"
             data-bs-slide-to="2"
             aria-label="Slide 3"
           ></button>
         </div>
-        <div class="carousel-inner" style="height: 100%">
-          <div class="carousel-item active">
-            <a href="https://oakbrace.co.uk"
-              ><img
-                src="https://images4.alphacoders.com/114/1141675.jpg"
-                class="d-block w-100"
-                alt="oakbrace"
+        <div class="carousel-inner">
+          <div
+            class="carousel-item active"
+            data-bs-interval="2800"
+            v-for="item in carousel"
+            :key="item.id"
+          >
+            <a :href="item.links"
+              ><img :src="item.image" class="d-block w-100" alt="..."
             /></a>
             <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
+              <h5>{{ item.text }}</h5>
               <p>
-                Some representative placeholder content for the first slide.
+                {{ item.description }}
               </p>
             </div>
           </div>
-          <div class="carousel-item">
+          <!-- <div class="carousel-item" data-bs-interval="2000">
             <img
-              src="https://images2.alphacoders.com/995/995155.png"
+              src="https://oakbrace.co.uk/img/banner3_home_desktop.1ffe47f4.jpg"
               class="d-block w-100"
-              alt="oakbrace"
+              alt="..."
             />
             <div class="carousel-caption d-none d-md-block">
               <h5>Second slide label</h5>
@@ -64,10 +61,9 @@
           </div>
           <div class="carousel-item">
             <img
-              src="https://cdn.homedit.com/wp-content/uploads/2020/01/River-House-Indonesia-by-Alexis-Dornier.jpg"
+              src="https://oakbrace.co.uk/img/banner3_home_desktop.1ffe47f4.jpg"
               class="d-block w-100"
-              style="height: 100%"
-              alt="oakbrace"
+              alt="..."
             />
             <div class="carousel-caption d-none d-md-block">
               <h5>Third slide label</h5>
@@ -75,12 +71,12 @@
                 Some representative placeholder content for the third slide.
               </p>
             </div>
-          </div>
+          </div> -->
         </div>
-        <!-- <button
+        <button
           class="carousel-control-prev"
           type="button"
-          data-bs-target="#carouselExampleCaptions"
+          data-bs-target="#carouselExampleDark"
           data-bs-slide="prev"
         >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -89,12 +85,12 @@
         <button
           class="carousel-control-next"
           type="button"
-          data-bs-target="#carouselExampleCaptions"
+          data-bs-target="#carouselExampleDark"
           data-bs-slide="next"
         >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
-        </button> -->
+        </button>
       </div>
       <!-- CAROUSEL-END -->
 
@@ -146,10 +142,6 @@
         <foot />
       </div>
     </div>
-    <!-- loader part  -->
-    <!-- <div class="loader-container">
-      <img src="./load.gif" alt="" />
-    </div> -->
   </div>
 </template>
 
@@ -157,7 +149,6 @@
 import navbar from "../components/navbar.vue";
 import cards from "../components/home-card.vue";
 import foot from "../components/foot.vue";
-
 export default {
   components: {
     navbar,
@@ -166,7 +157,31 @@ export default {
   },
 
   data() {
-    return {};
+    return {
+      carousel: [
+        {
+          image: "https://oakbrace.co.uk/img/banner3_home_desktop.1ffe47f4.jpg",
+          text: "First slide label",
+          description:
+            "Some representative placeholder content for the first slide.",
+          links: "https://oakbrace.co.uk",
+        },
+        {
+          image: "https://oakbrace.co.uk/img/banner3_home_desktop.1ffe47f4.jpg",
+          text: "Second slide label",
+          description:
+            "Some representative placeholder content for the first slide.",
+          links: "#",
+        },
+        {
+          image: "https://oakbrace.co.uk/img/banner3_home_desktop.1ffe47f4.jpg",
+          text: "Third slide label",
+          description:
+            "Some representative placeholder content for the first slide.",
+          links: "/services",
+        },
+      ],
+    };
   },
 };
 </script>

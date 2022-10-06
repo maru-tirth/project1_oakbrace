@@ -1,206 +1,39 @@
 <template>
-  <div>
-    <v-row>
-      <!-- card1 -->
-      <v-col cols="12" md="4">
-        <v-card class="mx-auto" max-width="344">
-          <v-img
-            src="https://oakbrace.co.uk/img/banner_services1_mobile.aa83cb60.jpg"
-            height="200px"
-          ></v-img>
+  <div
+    style="
+      display: flex;
+      width: 100%;
+      column-gap: 10px;
+      flex-wrap: wrap;
+      row-gap: 27px;
+    "
+  >
+    <v-card
+      class="mx-auto"
+      max-width="344"
+      v-for="item in title"
+      :key="item.id"
+    >
+      <v-img :src="item.images" height="200px"></v-img>
 
-          <v-card-title v-for="text in title" :key="text.id">
-            {{ text.lable }}
-          </v-card-title>
+      <v-card-title>
+        {{ item.label }}
+      </v-card-title>
 
-          <v-card-subtitle>
-            <div v-for="data in details" :key="data.id">
-              {{ data.lable }}
-            </div>
-          </v-card-subtitle>
+      <v-card-subtitle>
+        <div>
+          {{ item.description }}
+        </div>
+      </v-card-subtitle>
 
-          <v-card-actions>
-            <router-link to="/loft-conversions" style="text-decoration: none"
-              ><v-btn
-                color="orange lighten-2"
-                outlined
-                class="explore"
-                v-for="text in buttonText"
-                :key="text.id"
-              >
-                {{ text.lable }}
-              </v-btn></router-link
-            >
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <!-- card2 -->
-      <v-col cols="12" md="4">
-        <v-card class="mx-auto" max-width="344">
-          <v-img
-            src="https://oakbrace.co.uk/img/banner_services2_desktop.ddbf9235.jpg"
-            height="200px"
-          ></v-img>
-
-          <v-card-title v-for="text in title" :key="text.id">
-            {{ text.lable }}
-          </v-card-title>
-
-          <v-card-subtitle>
-            <div v-for="data in details" :key="data.id">
-              {{ data.lable }}
-            </div>
-          </v-card-subtitle>
-
-          <v-card-actions>
-            <router-link to="/extensions" style="text-decoration: none"
-              ><v-btn
-                color="orange lighten-2"
-                outlined
-                class="explore"
-                v-for="text in buttonText"
-                :key="text.id"
-              >
-                {{ text.lable }}
-              </v-btn></router-link
-            >
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <!-- card3 -->
-      <v-col cols="12" md="4">
-        <v-card class="mx-auto" max-width="344">
-          <v-img
-            src="https://oakbrace.co.uk/img/banner_services3_mobile.e8f43fbf.jpg"
-            height="200px"
-          ></v-img>
-
-          <v-card-title v-for="text in title" :key="text.id">
-            {{ text.lable }}
-          </v-card-title>
-
-          <v-card-subtitle>
-            <div v-for="data in details" :key="data.id">
-              {{ data.lable }}
-            </div>
-          </v-card-subtitle>
-
-          <v-card-actions>
-            <router-link to="/refurbishments" style="text-decoration: none"
-              ><v-btn
-                color="orange lighten-2"
-                outlined
-                class="explore"
-                v-for="text in buttonText"
-                :key="text.id"
-              >
-                {{ text.lable }}
-              </v-btn></router-link
-            >
-          </v-card-actions>
-        </v-card>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" md="4">
-        <v-card class="mx-auto" max-width="344">
-          <v-img
-            src="	https://oakbrace.co.uk/img/banner_services4_desktop.601802b1.jpg"
-            height="200px"
-          ></v-img>
-
-          <v-card-title v-for="text in title" :key="text.id">
-            {{ text.lable }}
-          </v-card-title>
-
-          <v-card-subtitle>
-            <div v-for="data in details" :key="data.id">
-              {{ data.lable }}
-            </div>
-          </v-card-subtitle>
-
-          <v-card-actions>
-            <router-link to="/bespoke" style="text-decoration: none"
-              ><v-btn
-                color="orange lighten-2"
-                outlined
-                class="explore"
-                v-for="text in buttonText"
-                :key="text.id"
-              >
-                {{ text.lable }}
-              </v-btn></router-link
-            >
-          </v-card-actions>
-        </v-card>
-      </v-col>
-
-      <v-col cols="12" md="4">
-        <v-card class="mx-auto" max-width="344">
-          <v-img
-            src="	https://oakbrace.co.uk/img/banner_services5_mobile.85cb677f.jpg"
-            height="200px"
-          ></v-img>
-
-          <v-card-title v-for="text in title" :key="text.id">
-            {{ text.lable }}
-          </v-card-title>
-
-          <v-card-subtitle>
-            <div v-for="data in details" :key="data.id">
-              {{ data.lable }}
-            </div>
-          </v-card-subtitle>
-
-          <v-card-actions>
-            <router-link to="/kitchen" style="text-decoration: none"
-              ><v-btn
-                color="orange lighten-2"
-                outlined
-                class="explore"
-                v-for="text in buttonText"
-                :key="text.id"
-              >
-                {{ text.lable }}
-              </v-btn></router-link
-            >
-          </v-card-actions>
-        </v-card>
-      </v-col>
-
-      <v-col cols="12" md="4">
-        <v-card class="mx-auto" max-width="344">
-          <v-img
-            src="	https://oakbrace.co.uk/img/banner_services6_mobile.b625f3be.jpg"
-            height="200px"
-          ></v-img>
-
-          <v-card-title v-for="text in title" :key="text.id">
-            {{ text.lable }}
-          </v-card-title>
-
-          <v-card-subtitle>
-            <div v-for="data in details" :key="data.id">
-              {{ data.lable }}
-            </div>
-          </v-card-subtitle>
-
-          <v-card-actions>
-            <router-link to="/carpentary" style="text-decoration: none"
-              ><v-btn
-                color="orange lighten-2"
-                outlined
-                class="explore"
-                v-for="text in buttonText"
-                :key="text.id"
-              >
-                {{ text.lable }}
-              </v-btn></router-link
-            >
-          </v-card-actions>
-        </v-card>
-      </v-col>
-    </v-row>
+      <v-card-actions>
+        <router-link :to="item.link" style="text-decoration: none"
+          ><v-btn color="orange lighten-2" outlined class="explore">
+            Explore
+          </v-btn></router-link
+        >
+      </v-card-actions>
+    </v-card>
   </div>
 </template>
 <script>
@@ -211,61 +44,55 @@ export default {
       title: [
         {
           id: 1,
-          label: "LOFT CONVERSIONS",
-        },
-        {
-          id: 2,
-          label: "EXTENSIVE BUILDS",
-        },
-        {
-          id: 3,
-          label: "REFURBISHMENTS",
-        },
-        {
-          id: 4,
-          label: "BESPOKE FINISHES",
-        },
-        {
-          id: 5,
-          label: "KITCHENS FIT-OUTS",
-        },
-        {
-          id: 6,
-          label: "CARPENTARY",
-        },
-      ],
-      details: [
-        {
-          id: 1,
-          lable:
+          label: "Loft Conversions",
+          description:
             "Add space with a beautiful master bedroom, new spacious home office or a special dream retreat.",
+          link: "/loft-conversions",
+          images: "https://oakbrace.co.uk/img/home1_desktop.533bf097.jpg",
         },
+
         {
           id: 2,
-          lable:
+          label: "Extensions",
+          description:
             "Why move house when you can add rooms and space, improving your properties value and potential.",
+          link: "/extensions",
+          images: "https://oakbrace.co.uk/img/home2_desktop.7855d3d4.jpg",
         },
         {
           id: 3,
-          lable:
-            "Improving your property can be overwhelming, but we can help you design and deliver your dreams.",
+          label: "Refurbishments",
+          description:
+            "Improving your property can be overwhelming, but we can help you design and deliver your dream",
+          link: "/refurbishments",
+          images: "https://oakbrace.co.uk/img/home3_desktop.2f7c3a77.jpg",
         },
         {
           id: 4,
-          lable:
-            "Feature walls, flooring, hand made kitchens,sheliving systems, lighting & smart solutions.",
+          label: "Bespoke Finishes",
+          description:
+            " Feature walls, flooring, hand made kitchens, shelving systems, lighting & smart solutions.",
+          link: "/bespoke",
+          images: "https://oakbrace.co.uk/img/home1_desktop.533bf097.jpg",
         },
         {
           id: 5,
-          lable:
-            "We are renowned for our beautifully designed and installed contemporary and traditional kitchen.",
+          label: "Carpentry",
+          description:
+            " We are renowned for our beautifully designed and installed contemporary and traditional kitchen",
+          link: "/carpentary",
+          images: "https://oakbrace.co.uk/img/home1_desktop.533bf097.jpg",
         },
         {
           id: 6,
-          lable:
-            "Highly skilled craftsmen with a passio for timber,joinery and the art or carpentry.",
+          label: "Kitchen Fit-outs",
+          description:
+            " Highly skilled craftsmen with a passion for timber woodwork, joinery and the art or carpentry.",
+          link: "/kitchen",
+          images: "https://oakbrace.co.uk/img/home1_desktop.533bf097.jpg",
         },
       ],
+
       buttonText: [
         {
           id: 1,
@@ -280,9 +107,9 @@ export default {
       .then((res) => res.json())
       .then((data) => {
         this.cards = data;
+        console.log(this.cards);
       })
       .catch((err) => console.log(err));
-    console.log(this.cards);
   },
 };
 </script>
